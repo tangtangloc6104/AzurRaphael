@@ -1,22 +1,76 @@
 import { createStore } from 'vuex';
 
+const state = {
+  cart: [],
+  items: [], // Define the items array in the state
+  isLoggedIn: false,
+  user: null,
+};
+
 const updateItems = (state, { product, size, quantity }) => {
   const storeItem = state.items.find(item => item.id === product.id);
   if (storeItem) {
-    const storeSize = storeItem.sizes.find(s => s.size === size);
-    if (storeSize) {
-      storeSize.quantity += quantity;
+    // Update the existing item
+    storeItem.size = size;
+    storeItem.quantity = quantity;
+  } else {
+    // Add a new item to the array
+    state.items.push({ id: product.id, size, quantity });
+  }
+};
+
+const mutations = {
+  updateItems,
+  setItems(state, items) {
+    state.items = items;
+  },
+  addToCart(state, { product, size }) {
+    const item = state.cart.find(item => item.id === product.id && item.selectedSize === size);
+    if (item) {
+      item.quantity += 1;
+    } else {
+      state.cart.push({
+        ...product,
+        selectedSize: size,
+        quantity: 1
+      });
     }
+    updateItems(state, { product, size, quantity: -1 });
+  },
+  increaseQuantity(state, { product, size }) {
+    const item = state.cart.find(item => item.id === product.id && item.selectedSize === size);
+    if (item) {
+      item.quantity += 1;
+      updateItems(state, { product, size, quantity: -1 });
+    }
+  },
+  decreaseQuantity(state, { product, size }) {
+    const item = state.cart.find(item => item.id === product.id && item.selectedSize === size);
+    if (item) {
+      if (item.quantity > 1) {
+        item.quantity -= 1;
+        updateItems(state, { product, size, quantity: 1 });
+      } else {
+        state.cart = state.cart.filter(cartItem => cartItem.id !== product.id || cartItem.selectedSize !== size);
+        updateItems(state, { product, size, quantity: 1 });
+      }
+    }
+  },
+  clearCart(state) {
+    state.cart = [];
+  },
+  setLoginStatus(state, { status, user }) {
+    state.isLoggedIn = status;
+    state.user = user;
+  },
+  removeFromCart(state, item) {
+    state.cart = state.cart.filter(cartItem => cartItem.id !== item.id || cartItem.selectedSize !== item.selectedSize);
+    updateItems(state, { product: item, size: item.selectedSize, quantity: item.quantity });
   }
 };
 
 export default createStore({
-  state: {
-    cart: [],
-    items: items,
-    isLoggedIn: false,
-    user: null,
-  },
+  state,
   getters: {
     cartItems: state => state.cart,
     cartTotal: state => {
@@ -31,51 +85,7 @@ export default createStore({
     isLoggedIn: state => state.isLoggedIn,
     user: state => state.user,
   },
-  mutations: {
-    addToCart(state, { product, size }) {
-      const item = state.cart.find(item => item.id === product.id && item.selectedSize === size);
-      if (item) {
-        item.quantity += 1;
-      } else {
-        state.cart.push({
-          ...product,
-          selectedSize: size,
-          quantity: 1
-        });
-      }
-      updateItems(state, { product, size, quantity: -1 });
-    },
-    increaseQuantity(state, { product, size }) {
-      const item = state.cart.find(item => item.id === product.id && item.selectedSize === size);
-      if (item) {
-        item.quantity += 1;
-        updateItems(state, { product, size, quantity: -1 });
-      }
-    },
-    decreaseQuantity(state, { product, size }) {
-      const item = state.cart.find(item => item.id === product.id && item.selectedSize === size);
-      if (item) {
-        if (item.quantity > 1) {
-          item.quantity -= 1;
-          updateItems(state, { product, size, quantity: 1 });
-        } else {
-          state.cart = state.cart.filter(cartItem => cartItem.id !== product.id || cartItem.selectedSize !== size);
-          updateItems(state, { product, size, quantity: 1 });
-        }
-      }
-    },
-    clearCart(state) {
-      state.cart = [];
-    },
-    setLoginStatus(state, { status, user }) {
-      state.isLoggedIn = status;
-      state.user = user;
-    },
-    removeFromCart(state, item) {
-      state.cart = state.cart.filter(cartItem => cartItem.id !== item.id || cartItem.selectedSize !== item.selectedSize);
-      updateItems(state, { product: item, size: item.selectedSize, quantity: item.quantity });
-    }
-  },
+  mutations,
   actions: {
     addToCart({ commit }, payload) {
       commit('addToCart', payload);
