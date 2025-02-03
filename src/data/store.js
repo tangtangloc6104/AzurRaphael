@@ -1,5 +1,4 @@
 import { createStore } from 'vuex';
-import items from './items.js';
 
 const updateItems = (state, { product, size, quantity }) => {
   const storeItem = state.items.find(item => item.id === product.id);
