@@ -52,51 +52,64 @@
   </template>
     
 
-    <script>
-    import { mapActions } from 'vuex';
-    
-    export default {
-      name: "AppRegister",
-      data() {
-        return {
-          form: {
-            username: "",
-            password: "",
-            email: "",
-            fullName: ""
-          }
-        };
+<script>
+import axios from 'axios';
+import { mapActions } from 'vuex';
+
+export default {
+  name: "AppRegister",
+  data() {
+    return {
+      form: {
+        username: "",
+        password: "",
+        email: "",
+        fullName: ""
       },
-      methods: {
-        ...mapActions(['setLoginStatus']),
-        handleRegister() {
-          // Lấy dữ liệu accounts từ localStorage
-          let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
-          
-          const existingAccount = accounts.find(acc => acc.username === this.form.username);
-          if (existingAccount) {
-            alert("Tên đăng nhập đã được sử dụng.");
-            return;
-          }
-    
-          const newAccount = {
-            username: this.form.username,
-            password: this.form.password,
-            email: this.form.email,
-            fullName: this.form.fullName,
-            createdAt: new Date().toISOString()
-          };
-          
-          accounts.push(newAccount); // Thêm tài khoản mới vào mảng accounts
-          localStorage.setItem('accounts', JSON.stringify(accounts)); // Lưu lại mảng accounts vào localStorage
-    
-          console.log("Đăng ký thành công với tài khoản:", newAccount);
-          alert("Đăng ký thành công! Bây giờ bạn có thể đăng nhập.");
-          this.$router.push('/login'); // Chuyển hướng về trang đăng nhập
-        }
-      }
+      accounts: []
     };
-    </script>
+  },
+  created() {
+    this.fetchAccounts();
+  },
+  methods: {
+    ...mapActions(['setLoginStatus']),
+    async fetchAccounts() {
+      try {
+        const response = await axios.get('http://localhost:3000/api/accounts');
+        this.accounts = response.data;
+      } catch (error) {
+        console.error('Error fetching accounts:', error);
+      }
+    },
+    async handleRegister() {
+      const existingAccount = this.accounts.find(acc => acc.username === this.form.username);
+      if (existingAccount) {
+        alert("Tên đăng nhập đã được sử dụng.");
+        return;
+      }
+
+      const newAccount = {
+        username: this.form.username,
+        password: this.form.password,
+        email: this.form.email,
+        fullName: this.form.fullName,
+        createdAt: new Date().toISOString()
+      };
+
+      try {
+        await axios.post('http://localhost:3000/api/accounts', newAccount);
+        console.log("Đăng ký thành công với tài khoản:", newAccount);
+        alert("Đăng ký thành công! Bây giờ bạn có thể đăng nhập.");
+        this.$router.push('/login');
+      } catch (error) {
+        console.error('Error registering account:', error);
+        alert('Đăng ký thất bại. Vui lòng thử lại.');
+      }
+    }
+  }
+};
+</script>
     
 <style scoped>
 .register-container {

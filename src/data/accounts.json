@@ -1,0 +1,44 @@
+[
+  {
+    "username": "bluefox87",
+    "password": "BlueFox$87",
+    "email": "bluefox87@example.com",
+    "fullName": "Alex Johnson",
+    "createdAt": "2023-10-01T00:00:00.000Z"
+  },
+  {
+    "username": "sunny_side",
+    "password": "SunnyDay$99",
+    "email": "sunny_side@example.com",
+    "fullName": "Emma Davis",
+    "createdAt": "2023-10-01T00:00:00.000Z"
+  },
+  {
+    "username": "nightowl42",
+    "password": "OwL2023&night",
+    "email": "nightowl42@example.com",
+    "fullName": "Michael Brown",
+    "createdAt": "2023-10-01T00:00:00.000Z"
+  },
+  {
+    "username": "greenfield88",
+    "password": "Gr33nField@88",
+    "email": "greenfield88@example.com",
+    "fullName": "Olivia Wilson",
+    "createdAt": "2023-10-01T00:00:00.000Z"
+  },
+  {
+    "username": "red_panda21",
+    "password": "RedPanda!21",
+    "email": "red_panda21@example.com",
+    "fullName": "Liam Garcia",
+    "createdAt": "2023-10-01T00:00:00.000Z"
+  },
+  {
+    "username": "Khánh",
+    "password": "Anime4life@hen",
+    "email": "blinkcrk@gmail.com",
+    "fullName": "Trần Đăng Khánh",
+    "createdAt": "2025-02-06T10:15:43.739Z"
+  }
+]

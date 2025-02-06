@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import { mapActions } from 'vuex';
 
 export default {
@@ -46,20 +47,19 @@ export default {
   },
   methods: {
     ...mapActions(['setLoginStatus']),
-    handleLogin() {
-      // Lấy dữ liệu accounts từ localStorage
-      let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
-      
+    async handleLogin() {
       if (this.form.username && this.form.password) {
-        // Kiểm tra tài khoản trong mảng accounts
-        const account = accounts.find(acc => acc.username === this.form.username && acc.password === this.form.password);
-        
-        if (account) {
+        try {
+          const response = await axios.post('http://localhost:3000/api/login', this.form);
           console.log("Đăng nhập thành công với tài khoản:", this.form);
-          this.setLoginStatus({ status: true, user: account }); // Đặt trạng thái đăng nhập thành công và thông tin người dùng
-          this.$router.push('/'); // Chuyển hướng về trang chủ
-        } else {
-          alert("Tên đăng nhập hoặc mật khẩu không chính xác.");
+          this.setLoginStatus({ status: true, user: response.data.account });
+          this.$router.push('/');
+        } catch (error) {
+          if (error.response && error.response.status === 401) {
+            alert("Tên đăng nhập hoặc mật khẩu không chính xác.");
+          } else {
+            console.error('Error during login:', error);
+          }
         }
       } else {
         alert("Vui lòng nhập đầy đủ thông tin!");
