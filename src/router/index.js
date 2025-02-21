@@ -14,21 +14,6 @@ const routes = [
     component: Home
   },
   {
-    path: '/nam',
-    name: 'Men',
-    component: () => import('@/components/AppMen.vue')
-  },
-  {
-    path: '/nu',
-    name: 'Women',
-    component: () => import('@/components/AppWomen.vue')
-  },
-  {
-    path: '/phukien',
-    name: 'Accessories',
-    component: () => import('@/components/AppAccessories.vue')
-  },
-  {
     path: '/lienhe',
     name: 'Contact',
     component: () => import('@/components/AppContact.vue')

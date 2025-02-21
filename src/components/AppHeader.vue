@@ -6,9 +6,6 @@
       </div>
       <div class="links">
         <router-link to="/">Trang chủ</router-link>
-        <router-link to="/nam">Nam</router-link>
-        <router-link to="/nu">Nữ</router-link>
-        <router-link to="/phukien">Phụ kiện</router-link>
         <router-link to="/lienhe">Liên hệ</router-link>
         <router-link to="/tintuc">Tin tức</router-link>
       </div>
