@@ -3,7 +3,7 @@
          <div class="footer-container">
              <div class="footer-column">
                  <h3>Đây là trang web bán quần áo </h3>
-                 <p>Mọi chi tiết xin đừng liên hệ!</p>
+                 <p>Mọi chi tiết xin hãy liên hệ cho Lộc!</p>
              </div>
              <div class="footer-column">
                  <h3>Danh sách</h3>
