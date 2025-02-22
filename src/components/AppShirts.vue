@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Áo</h1>
+    <h1 class="title">Áo</h1>
     <div class="product-list">
       <div 
         v-for="product in filteredProducts" 
@@ -44,6 +44,11 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .product-list {
   display: flex;
   flex-wrap: wrap;

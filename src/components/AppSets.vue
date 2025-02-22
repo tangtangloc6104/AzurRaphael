@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Bộ</h1>
+    <h1 class="title">Bộ</h1>
     <div class="product-list">
       <div 
         v-for="product in filteredProducts" 
@@ -44,12 +44,18 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .product-list {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
 }
+
 .product-item {
   width: calc(100% / 5 - 32px);
   box-sizing: border-box;
@@ -61,12 +67,14 @@ export default {
   transition: transform 0.3s ease;
   cursor: pointer;
 }
+
 .product-item img {
   width: 100%;
   height: auto;
   border-bottom: 1px solid #ccc;
   margin-bottom: 8px;
 }
+
 .product-item:hover {
   transform: scale(1.05);
 }
