@@ -83,6 +83,11 @@ export default {
     handleAddToCart() {
       if (this.product.selectedSize && this.isLoggedIn) {
         this.addToCart({ product: this.product, size: this.product.selectedSize });
+        // Giảm số lượng trong kho
+        const size = this.product.sizes.find(size => size.size === this.product.selectedSize);
+        if (size) {
+          size.quantity -= 1;
+        }
       } else if (!this.isLoggedIn) {
         alert("Vui lòng đăng nhập để thêm vào giỏ hàng");
         this.$router.push('/login');

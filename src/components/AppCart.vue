@@ -36,6 +36,7 @@
 </template>
 <script>
 import { mapState, mapActions } from 'vuex';
+import axios from 'axios';
 
 export default {
   name: 'AppCart',
@@ -52,9 +53,15 @@ export default {
   },
   methods: {
     ...mapActions(['increaseQuantity', 'decreaseQuantity', 'removeFromCart']),
-    checkout() {
-      this.showSuccessModal = true;
-      this.$store.commit('clearCart');
+    async checkout() {
+      try {
+        await axios.post('http://localhost:3000/api/update-items', this.cartItems);
+        this.showSuccessModal = true;
+        this.$store.commit('clearCart');
+      } catch (error) {
+        console.error('Error during checkout:', error);
+        alert('Thanh toán thất bại. Vui lòng thử lại.');
+      }
     },
     closeModal() {
       this.showSuccessModal = false;
@@ -71,10 +78,6 @@ export default {
   }
 };
 </script>
-
-
-
-
 
 <style scoped>
 .cart-container {

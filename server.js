@@ -50,6 +50,31 @@ app.post('/api/accounts', (req, res) => {
   });
 });
 
+app.post('/api/update-items', (req, res) => {
+  const cartItems = req.body;
+  fs.readFile(path.join(__dirname, 'src/data/items.json'), 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).send('Error reading items file');
+    }
+    const items = JSON.parse(data);
+    cartItems.forEach(cartItem => {
+      const item = items.find(item => item.id === cartItem.id);
+      if (item) {
+        const size = item.sizes.find(size => size.size === cartItem.selectedSize);
+        if (size) {
+          size.quantity -= cartItem.quantity;
+        }
+      }
+    });
+    fs.writeFile(path.join(__dirname, 'src/data/items.json'), JSON.stringify(items, null, 2), (err) => {
+      if (err) {
+        return res.status(500).send('Error writing items file');
+      }
+      res.status(200).send({ message: 'Items updated successfully' });
+    });
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });

@@ -6,9 +6,18 @@
     "description": "Áo sơ mi nam chất lượng cao, vải thoáng mát phù hợp cho mùa hè",
     "price": 200000,
     "sizes": [
-      { "size": "M", "quantity": 5 },
-      { "size": "L", "quantity": 7 },
-      { "size": "XL", "quantity": 2 }
+      {
+        "size": "M",
+        "quantity": 2
+      },
+      {
+        "size": "L",
+        "quantity": 7
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -18,9 +27,18 @@
     "description": "Áo thun nam mềm mại, dễ phối đồ cho mọi dịp",
     "price": 250000,
     "sizes": [
-      { "size": "M", "quantity": 8 },
-      { "size": "L", "quantity": 6 },
-      { "size": "XL", "quantity": 4 }
+      {
+        "size": "M",
+        "quantity": 8
+      },
+      {
+        "size": "L",
+        "quantity": 6
+      },
+      {
+        "size": "XL",
+        "quantity": 4
+      }
     ]
   },
   {
@@ -30,9 +48,18 @@
     "description": "Áo polo nam thời trang, chất liệu cao cấp",
     "price": 300000,
     "sizes": [
-      { "size": "M", "quantity": 10 },
-      { "size": "L", "quantity": 5 },
-      { "size": "XL", "quantity": 3 }
+      {
+        "size": "M",
+        "quantity": 10
+      },
+      {
+        "size": "L",
+        "quantity": 5
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -42,9 +69,18 @@
     "description": "Áo khoác nam giữ ấm, phong cách hiện đại",
     "price": 500000,
     "sizes": [
-      { "size": "M", "quantity": 4 },
-      { "size": "L", "quantity": 6 },
-      { "size": "XL", "quantity": 2 }
+      {
+        "size": "M",
+        "quantity": 4
+      },
+      {
+        "size": "L",
+        "quantity": 6
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -54,9 +90,18 @@
     "description": "Áo hoodie nam ấm áp, phong cách",
     "price": 350000,
     "sizes": [
-      { "size": "M", "quantity": 6 },
-      { "size": "L", "quantity": 4 },
-      { "size": "XL", "quantity": 2 }
+      {
+        "size": "M",
+        "quantity": 6
+      },
+      {
+        "size": "L",
+        "quantity": 4
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -66,9 +111,18 @@
     "description": "Áo len nam mềm mại, giữ ấm tốt",
     "price": 400000,
     "sizes": [
-      { "size": "M", "quantity": 5 },
-      { "size": "L", "quantity": 7 },
-      { "size": "XL", "quantity": 3 }
+      {
+        "size": "M",
+        "quantity": 5
+      },
+      {
+        "size": "L",
+        "quantity": 7
+      },
+      {
+        "size": "XL",
+        "quantity": 3
+      }
     ]
   },
   {
@@ -78,9 +132,18 @@
     "description": "Áo vest nam lịch lãm, sang trọng",
     "price": 1000000,
     "sizes": [
-      { "size": "M", "quantity": 3 },
-      { "size": "L", "quantity": 5 },
-      { "size": "XL", "quantity": 2 }
+      {
+        "size": "M",
+        "quantity": 3
+      },
+      {
+        "size": "L",
+        "quantity": 5
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -90,9 +153,18 @@
     "description": "Áo phông nam thoải mái, dễ phối đồ",
     "price": 200000,
     "sizes": [
-      { "size": "M", "quantity": 8 },
-      { "size": "L", "quantity": 6 },
-      { "size": "XL", "quantity": 4 }
+      {
+        "size": "M",
+        "quantity": 8
+      },
+      {
+        "size": "L",
+        "quantity": 6
+      },
+      {
+        "size": "XL",
+        "quantity": 4
+      }
     ]
   },
   {
@@ -102,9 +174,18 @@
     "description": "Áo khoác gió nam chống gió, chống nước",
     "price": 450000,
     "sizes": [
-      { "size": "M", "quantity": 5 },
-      { "size": "L", "quantity": 7 },
-      { "size": "XL", "quantity": 3 }
+      {
+        "size": "M",
+        "quantity": 5
+      },
+      {
+        "size": "L",
+        "quantity": 7
+      },
+      {
+        "size": "XL",
+        "quantity": 3
+      }
     ]
   },
   {
@@ -114,9 +195,18 @@
     "description": "Áo len cổ lọ nam giữ ấm tốt, phong cách",
     "price": 400000,
     "sizes": [
-      { "size": "M", "quantity": 6 },
-      { "size": "L", "quantity": 4 },
-      { "size": "XL", "quantity": 2 }
+      {
+        "size": "M",
+        "quantity": 6
+      },
+      {
+        "size": "L",
+        "quantity": 4
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -126,9 +216,18 @@
     "description": "Áo blazer nam lịch lãm, sang trọng",
     "price": 1200000,
     "sizes": [
-      { "size": "M", "quantity": 3 },
-      { "size": "L", "quantity": 5 },
-      { "size": "XL", "quantity": 2 }
+      {
+        "size": "M",
+        "quantity": 3
+      },
+      {
+        "size": "L",
+        "quantity": 5
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -138,9 +237,18 @@
     "description": "Áo cardigan nam mềm mại, giữ ấm tốt",
     "price": 350000,
     "sizes": [
-      { "size": "M", "quantity": 5 },
-      { "size": "L", "quantity": 7 },
-      { "size": "XL", "quantity": 3 }
+      {
+        "size": "M",
+        "quantity": 5
+      },
+      {
+        "size": "L",
+        "quantity": 7
+      },
+      {
+        "size": "XL",
+        "quantity": 3
+      }
     ]
   },
   {
@@ -150,9 +258,18 @@
     "description": "Áo khoác da nam sang trọng, đẳng cấp",
     "price": 1500000,
     "sizes": [
-      { "size": "M", "quantity": 3 },
-      { "size": "L", "quantity": 5 },
-      { "size": "XL", "quantity": 2 }
+      {
+        "size": "M",
+        "quantity": 3
+      },
+      {
+        "size": "L",
+        "quantity": 5
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -162,9 +279,18 @@
     "description": "Áo khoác bomber nam phong cách, giữ ấm tốt",
     "price": 500000,
     "sizes": [
-      { "size": "M", "quantity": 6 },
-      { "size": "L", "quantity": 4 },
-      { "size": "XL", "quantity": 2 }
+      {
+        "size": "M",
+        "quantity": 6
+      },
+      {
+        "size": "L",
+        "quantity": 4
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -174,9 +300,18 @@
     "description": "Giày thể thao nam êm ái, phong cách",
     "price": 600000,
     "sizes": [
-      { "size": "40", "quantity": 5 },
-      { "size": "42", "quantity": 7 },
-      { "size": "44", "quantity": 3 }
+      {
+        "size": "40",
+        "quantity": 5
+      },
+      {
+        "size": "42",
+        "quantity": 7
+      },
+      {
+        "size": "44",
+        "quantity": 3
+      }
     ]
   },
   {
@@ -186,9 +321,18 @@
     "description": "Giày da nam sang trọng, đẳng cấp",
     "price": 800000,
     "sizes": [
-      { "size": "40", "quantity": 4 },
-      { "size": "42", "quantity": 6 },
-      { "size": "44", "quantity": 2 }
+      {
+        "size": "40",
+        "quantity": 4
+      },
+      {
+        "size": "42",
+        "quantity": 6
+      },
+      {
+        "size": "44",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -198,9 +342,18 @@
     "description": "Giày lười nam tiện lợi, thoải mái",
     "price": 700000,
     "sizes": [
-      { "size": "40", "quantity": 5 },
-      { "size": "42", "quantity": 7 },
-      { "size": "44", "quantity": 3 }
+      {
+        "size": "40",
+        "quantity": 5
+      },
+      {
+        "size": "42",
+        "quantity": 7
+      },
+      {
+        "size": "44",
+        "quantity": 3
+      }
     ]
   },
   {
@@ -210,9 +363,18 @@
     "description": "Giày tây nam sang trọng, đẳng cấp",
     "price": 900000,
     "sizes": [
-      { "size": "40", "quantity": 4 },
-      { "size": "42", "quantity": 6 },
-      { "size": "44", "quantity": 2 }
+      {
+        "size": "40",
+        "quantity": 4
+      },
+      {
+        "size": "42",
+        "quantity": 6
+      },
+      {
+        "size": "44",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -222,9 +384,18 @@
     "description": "Giày thể thao cao cổ nam êm ái, phong cách",
     "price": 650000,
     "sizes": [
-      { "size": "40", "quantity": 5 },
-      { "size": "42", "quantity": 7 },
-      { "size": "44", "quantity": 3 }
+      {
+        "size": "40",
+        "quantity": 5
+      },
+      {
+        "size": "42",
+        "quantity": 7
+      },
+      {
+        "size": "44",
+        "quantity": 3
+      }
     ]
   },
   {
@@ -234,9 +405,18 @@
     "description": "Giày da lộn nam sang trọng, đẳng cấp",
     "price": 850000,
     "sizes": [
-      { "size": "40", "quantity": 4 },
-      { "size": "42", "quantity": 6 },
-      { "size": "44", "quantity": 2 }
+      {
+        "size": "40",
+        "quantity": 4
+      },
+      {
+        "size": "42",
+        "quantity": 6
+      },
+      {
+        "size": "44",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -246,9 +426,18 @@
     "description": "Giày thể thao nam êm ái, phong cách",
     "price": 600000,
     "sizes": [
-      { "size": "40", "quantity": 5 },
-      { "size": "42", "quantity": 7 },
-      { "size": "44", "quantity": 3 }
+      {
+        "size": "40",
+        "quantity": 5
+      },
+      {
+        "size": "42",
+        "quantity": 7
+      },
+      {
+        "size": "44",
+        "quantity": 3
+      }
     ]
   },
   {
@@ -258,9 +447,18 @@
     "description": "Giày da nam sang trọng, đẳng cấp",
     "price": 800000,
     "sizes": [
-      { "size": "40", "quantity": 4 },
-      { "size": "42", "quantity": 6 },
-      { "size": "44", "quantity": 2 }
+      {
+        "size": "40",
+        "quantity": 4
+      },
+      {
+        "size": "42",
+        "quantity": 6
+      },
+      {
+        "size": "44",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -270,9 +468,18 @@
     "description": "Giày lười nam tiện lợi, thoải mái",
     "price": 700000,
     "sizes": [
-      { "size": "40", "quantity": 5 },
-      { "size": "42", "quantity": 7 },
-      { "size": "44", "quantity": 3 }
+      {
+        "size": "40",
+        "quantity": 5
+      },
+      {
+        "size": "42",
+        "quantity": 7
+      },
+      {
+        "size": "44",
+        "quantity": 3
+      }
     ]
   },
   {
@@ -282,9 +489,18 @@
     "description": "Giày tây nam sang trọng, đẳng cấp",
     "price": 900000,
     "sizes": [
-      { "size": "40", "quantity": 4 },
-      { "size": "42", "quantity": 6 },
-      { "size": "44", "quantity": 2 }
+      {
+        "size": "40",
+        "quantity": 4
+      },
+      {
+        "size": "42",
+        "quantity": 6
+      },
+      {
+        "size": "44",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -294,9 +510,18 @@
     "description": "Giày thể thao cao cổ nam êm ái, phong cách",
     "price": 650000,
     "sizes": [
-      { "size": "40", "quantity": 5 },
-      { "size": "42", "quantity": 7 },
-      { "size": "44", "quantity": 3 }
+      {
+        "size": "40",
+        "quantity": 5
+      },
+      {
+        "size": "42",
+        "quantity": 7
+      },
+      {
+        "size": "44",
+        "quantity": 3
+      }
     ]
   },
   {
@@ -306,9 +531,18 @@
     "description": "Giày da lộn nam sang trọng, đẳng cấp",
     "price": 850000,
     "sizes": [
-      { "size": "40", "quantity": 4 },
-      { "size": "42", "quantity": 6 },
-      { "size": "44", "quantity": 2 }
+      {
+        "size": "40",
+        "quantity": 4
+      },
+      {
+        "size": "42",
+        "quantity": 6
+      },
+      {
+        "size": "44",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -318,9 +552,18 @@
     "description": "Bộ vest nam lịch lãm, sang trọng",
     "price": 2000000,
     "sizes": [
-      { "size": "M", "quantity": 3 },
-      { "size": "L", "quantity": 5 },
-      { "size": "XL", "quantity": 2 }
+      {
+        "size": "M",
+        "quantity": 3
+      },
+      {
+        "size": "L",
+        "quantity": 5
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -330,9 +573,18 @@
     "description": "Bộ đồ thể thao nam thoải mái, phong cách",
     "price": 1200000,
     "sizes": [
-      { "size": "M", "quantity": 6 },
-      { "size": "L", "quantity": 4 },
-      { "size": "XL", "quantity": 2 }
+      {
+        "size": "M",
+        "quantity": 6
+      },
+      {
+        "size": "L",
+        "quantity": 4
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -342,9 +594,18 @@
     "description": "Bộ đồ ngủ nam mềm mại, thoải mái",
     "price": 500000,
     "sizes": [
-      { "size": "M", "quantity": 8 },
-      { "size": "L", "quantity": 6 },
-      { "size": "XL", "quantity": 4 }
+      {
+        "size": "M",
+        "quantity": 8
+      },
+      {
+        "size": "L",
+        "quantity": 6
+      },
+      {
+        "size": "XL",
+        "quantity": 4
+      }
     ]
   },
   {
@@ -354,9 +615,18 @@
     "description": "Bộ đồ công sở nam lịch sự, phù hợp cho công việc",
     "price": 1500000,
     "sizes": [
-      { "size": "M", "quantity": 5 },
-      { "size": "L", "quantity": 7 },
-      { "size": "XL", "quantity": 3 }
+      {
+        "size": "M",
+        "quantity": 5
+      },
+      {
+        "size": "L",
+        "quantity": 7
+      },
+      {
+        "size": "XL",
+        "quantity": 3
+      }
     ]
   },
   {
@@ -366,9 +636,18 @@
     "description": "Bộ đồ dạo phố nam thời trang, phong cách",
     "price": 1000000,
     "sizes": [
-      { "size": "M", "quantity": 6 },
-      { "size": "L", "quantity": 4 },
-      { "size": "XL", "quantity": 2 }
+      {
+        "size": "M",
+        "quantity": 6
+      },
+      {
+        "size": "L",
+        "quantity": 4
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -378,9 +657,18 @@
     "description": "Áo sơ mi nam chất lượng cao, vải thoáng mát phù hợp cho mùa hè",
     "price": 200000,
     "sizes": [
-      { "size": "M", "quantity": 5 },
-      { "size": "L", "quantity": 7 },
-      { "size": "XL", "quantity": 2 }
+      {
+        "size": "M",
+        "quantity": 5
+      },
+      {
+        "size": "L",
+        "quantity": 7
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   },
   {
@@ -390,9 +678,18 @@
     "description": "Áo thun nam mềm mại, dễ phối đồ cho mọi dịp",
     "price": 250000,
     "sizes": [
-      { "size": "M", "quantity": 8 },
-      { "size": "L", "quantity": 6 },
-      { "size": "XL", "quantity": 4 }
+      {
+        "size": "M",
+        "quantity": 8
+      },
+      {
+        "size": "L",
+        "quantity": 6
+      },
+      {
+        "size": "XL",
+        "quantity": 4
+      }
     ]
   },
   {
@@ -402,9 +699,18 @@
     "description": "Áo polo nam thời trang, chất liệu cao cấp",
     "price": 300000,
     "sizes": [
-      { "size": "M", "quantity": 10 },
-      { "size": "L", "quantity": 5 },
-      { "size": "XL", "quantity": 3 }
+      {
+        "size": "M",
+        "quantity": 10
+      },
+      {
+        "size": "L",
+        "quantity": 5
+      },
+      {
+        "size": "XL",
+        "quantity": 3
+      }
     ]
   },
   {
@@ -414,9 +720,18 @@
     "description": "Áo khoác nam giữ ấm, phong cách hiện đại",
     "price": 500000,
     "sizes": [
-      { "size": "M", "quantity": 4 },
-      { "size": "L", "quantity": 6 },
-      { "size": "XL", "quantity": 2 }
+      {
+        "size": "M",
+        "quantity": 4
+      },
+      {
+        "size": "L",
+        "quantity": 6
+      },
+      {
+        "size": "XL",
+        "quantity": 2
+      }
     ]
   }
 ]
