@@ -14,4 +14,7 @@ app.provide('items', items);
 // Commit the mutation to set the items in the store
 store.commit('setItems', items);
 
+// Initialize login status from local storage
+store.dispatch('initializeLoginStatus');
+
 app.mount('#app');

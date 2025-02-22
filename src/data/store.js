@@ -62,10 +62,45 @@ const mutations = {
   setLoginStatus(state, { status, user }) {
     state.isLoggedIn = status;
     state.user = user;
+    if (status) {
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('user', JSON.stringify(user));
+    } else {
+      localStorage.removeItem('isLoggedIn');
+      localStorage.removeItem('user');
+    }
   },
   removeFromCart(state, item) {
     state.cart = state.cart.filter(cartItem => cartItem.id !== item.id || cartItem.selectedSize !== item.selectedSize);
     updateItems(state, { product: item, size: item.selectedSize, quantity: item.quantity });
+  }
+};
+
+const actions = {
+  addToCart({ commit }, payload) {
+    commit('addToCart', payload);
+  },
+  increaseQuantity({ commit }, payload) {
+    commit('increaseQuantity', payload);
+  },
+  decreaseQuantity({ commit }, payload) {
+    commit('decreaseQuantity', payload);
+  },
+  clearCart({ commit }) {
+    commit('clearCart');
+  },
+  setLoginStatus({ commit }, payload) {
+    commit('setLoginStatus', payload);
+  },
+  removeFromCart({ commit }, payload) {
+    commit('removeFromCart', payload);
+  },
+  initializeLoginStatus({ commit }) {
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (isLoggedIn && user) {
+      commit('setLoginStatus', { status: true, user });
+    }
   }
 };
 
@@ -86,24 +121,5 @@ export default createStore({
     user: state => state.user,
   },
   mutations,
-  actions: {
-    addToCart({ commit }, payload) {
-      commit('addToCart', payload);
-    },
-    increaseQuantity({ commit }, payload) {
-      commit('increaseQuantity', payload);
-    },
-    decreaseQuantity({ commit }, payload) {
-      commit('decreaseQuantity', payload);
-    },
-    clearCart({ commit }) {
-      commit('clearCart');
-    },
-    setLoginStatus({ commit }, payload) {
-      commit('setLoginStatus', payload);
-    },
-    removeFromCart({ commit }, payload) {
-      commit('removeFromCart', payload);
-    }
-  }
+  actions
 });
