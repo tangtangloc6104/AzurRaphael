@@ -5,9 +5,10 @@
     </div>
     <div class="product-details">
       <h1>{{ product.name }}</h1>
-      <p>{{ product.description }}</p>
-      <p>Giá: {{ product.price.toLocaleString() }} VNĐ</p>
-      <p>Số lượng trong kho: 
+      <p class="description">{{ product.description }}</p>
+      <p class="price">Giá: {{ product.price.toLocaleString() }} VNĐ</p>
+      <p class="stock">
+        Số lượng trong kho: 
         <span v-if="product.selectedSize">
           {{ selectedSizeQuantity }}
         </span>
@@ -15,7 +16,7 @@
           Vui lòng chọn size
         </span>
       </p>
-      <p>Size:</p>
+      <p class="size-label">Size:</p>
       <div class="size-selection">
         <button 
           v-for="(size, index) in product.sizes" 
@@ -45,6 +46,7 @@
     <p>Product not found</p>
   </div>
 </template>
+
 <script>
 import { mapActions, mapState } from 'vuex';
 
@@ -89,66 +91,121 @@ export default {
   }
 };
 </script>
-<style>
+
+<style scoped>
 .product-container {
   display: flex;
-  gap: 20px;
+  gap: 40px;
   align-items: flex-start;
   justify-content: center;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .product-image-wrapper {
   width: 500px;
   height: 500px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 10px;
+  background-color: white;
 }
+
 .product-image-wrapper img {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
 }
+
 .product-details {
   flex: 1;
   text-align: left;
 }
-.size-selection {
-  margin-top: 10px;
+
+.product-details h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #333;
 }
+
+.product-details .description {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.product-details .price {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #e74c3c;
+}
+
+.product-details .stock {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.product-details .size-label {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.size-selection {
+  margin-bottom: 20px;
+}
+
 .size-selection button {
-  margin-right: 5px;
-  padding: 5px 10px;
-  border: 1px solid #ccc;
+  margin-right: 10px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
   background-color: white;
   cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
+
 .size-selection button.selected {
-  background-color: black;
+  background-color: #333;
   color: white;
 }
+
+.size-selection button:hover {
+  background-color: #555;
+  color: white;
+}
+
 .add-to-cart {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: black;
+  padding: 15px 30px;
+  background-color: #e74c3c;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s;
 }
+
 .add-to-cart:hover {
-  background-color: #333;
+  background-color: #c0392b;
 }
+
 .add-to-cart:disabled {
   background-color: grey;
   cursor: not-allowed;
 }
+
 .error-message, .out-of-stock-message {
   color: red;
   margin-top: 10px;
+  font-size: 1.1em;
 }
 </style>

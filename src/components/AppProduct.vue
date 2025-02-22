@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="product-list">
       <div 
         v-for="product in paginatedProducts" 
@@ -72,10 +72,6 @@ export default {
   }
 };
 </script>
-
-
-
-
 
 <style scoped>
 .product-list {
