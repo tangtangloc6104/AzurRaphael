@@ -8,12 +8,11 @@
              <div class="footer-column">
                  <h3>Danh sách</h3>
                  <ul>
-                    <li><a href="/nam"> Nam </a></li>
-                    <li><a href="/nu"> Nữ </a></li>
-                    <li><a href="/lamdep"> Làm đẹp </a></li>
-                    <li><a href="/phukien"> Phụ kiện </a></li>
-                    <li><a href="/lienhe"> Liên hệ </a></li>
-                    <li><a href="/tintuc"> Tin tức </a></li>
+                    <li><router-link to="/ao">Áo</router-link></li>
+                    <li><router-link to="/giay">Giày</router-link></li>
+                    <li><router-link to="/bo">Bộ</router-link></li>
+                    <li><router-link to="/lienhe">Liên hệ</router-link></li>
+                    <li><router-link to="/tintuc">Tin tức</router-link></li>
                  </ul>
              </div>
              <div class="footer-column">

@@ -5,7 +5,10 @@ import ProductDetail from '@/components/AppProductDetail.vue';
 import AppCart from '@/components/AppCart.vue';
 import AppLogin from '@/components/AppLogin.vue';
 import AppRegister from '@/components/AppRegister.vue';
-import AppSearch from '@/components/AppSearch.vue'; 
+import AppSearch from '@/components/AppSearch.vue';
+import AppShirts from '@/components/AppShirts.vue';
+import AppShoes from '@/components/AppShoes.vue';
+import AppSets from '@/components/AppSets.vue';
 
 const routes = [
   {
@@ -50,6 +53,18 @@ const routes = [
   { path: '/register',
     name: 'AppRegister', 
     component: AppRegister 
+  },
+  { path: '/ao',
+    name: 'Shirts',
+    component: AppShirts 
+  },
+  { path: '/giay',
+    name: 'Shoes',
+    component: AppShoes 
+  },
+  { path: '/bo',
+    name: 'Sets',
+    component: AppSets 
   },
 ];
 
