@@ -3,7 +3,7 @@
     <div class="footer-container">
       <div class="footer-column">
         <h3>Đây là trang web bán quần áo</h3>
-        <p>Mọi chi tiết xin hãy liên hệ cho Lộc!</p>
+        <p>Mọi chi tiết xin hãy gọi cho Lộc! =))</p>
       </div>
       <div class="footer-column">
         <h3>Danh sách</h3>
@@ -18,6 +18,11 @@
       <div class="footer-column">
         <h3>Tăng Gia Lộc</h3>
         <p>MSSV: 22150212</p>
+        <p>Lớp: 221404</p>
+      </div>
+      <div class="footer-column">
+        <h3>Trần Đăng Khánh</h3>
+        <p>MSSV: 22150242</p>
         <p>Lớp: 221404</p>
       </div>
     </div>
