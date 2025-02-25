@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import ProductList from './AppProduct.vue'; 
+import ProductList from './AppProduct.vue';
 
 export default {
-  name: 'AppHome',  
+  name: 'AppHome',
   components: {
     ProductList,
   },

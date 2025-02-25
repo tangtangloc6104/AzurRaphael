@@ -119,6 +119,9 @@ export default createStore({
     },
     isLoggedIn: state => state.isLoggedIn,
     user: state => state.user,
+    latestProducts: state => {
+      return state.items.slice(-10).reverse();
+    }
   },
   mutations,
   actions

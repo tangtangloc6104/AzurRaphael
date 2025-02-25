@@ -1,5 +1,6 @@
 <template>
   <footer>
+    <AppBanner v-if="$route.path === '/'" />
     <div class="footer-container">
       <div class="footer-column">
         <h3>Đây là trang web bán quần áo</h3>
@@ -30,9 +31,15 @@
 </template>
 
 <script>
+import AppBanner from './AppBanner.vue';
+
 export default {
+  components: {
+    AppBanner
+  }
 };
 </script>
+
 
 <style scoped>
 footer {
